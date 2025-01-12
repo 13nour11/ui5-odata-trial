@@ -1,0 +1,29 @@
+<mvc:View 
+  controllerName="sap.ui.demo.nav.controller.modelEntity.ProductList" 
+  xmlns:mvc="sap.ui.core.mvc" 
+  displayBlock="true" 
+  xmlns="sap.m"
+>
+  <Shell id="shell">
+    <App id="app">
+      <pages>
+        <Page id="page" title="Products">
+          <content>
+            <List id="list" items="{products>/results}" mode="SingleSelect">
+              <items>
+                <StandardListItem title="{products>ID}" description="{products>Name}" />
+              </items>
+            </List>
+            <VBox>
+              <Input placeholder="Enter the ID for the category" id="idinput"/>
+              <Input placeholder="Enter the category name" id="nameinput"/>
+              <Button text="Create" press=".createData"/>
+              <Button text="Update" press=".updateData"/>
+              <Button text="Delete" press=".deleteData"/>
+            </VBox>
+          </content>
+        </Page>
+      </pages>
+    </App>
+  </Shell>
+</mvc:View>

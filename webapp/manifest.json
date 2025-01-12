@@ -21,6 +21,14 @@
           "odataVersion": "2.0",
           "localUri": "localService/metadata.xml"
         }
+      },
+      "Northwind": {
+        "uri": "/V2/Northwind/Northwind.svc/",
+        "type": "OData",
+        "settings": {
+          "odataVersion": "2.0",
+          "localUri": "localService/Northwind/metadata.xml"
+        }
       }
     }
   },
@@ -88,6 +96,19 @@
           "pattern": "employees/{employeeId}",
           "name": "employee",
           "target": "employee"
+        },
+        {
+          "pattern": "products",
+          "name": "productList",
+          "target": "products"
+        },
+        {
+          "path": "/V2/Northwind/Northwind.svc/",
+          "target": {
+            "type": "destination",
+            "name": "Northwind"
+          },
+          "description": "Northwind OData Service"
         }
       ],
       "targets": {
@@ -111,6 +132,12 @@
           "id": "employee",
           "name": "employee.Employee",
           "level": 3
+        },
+        "products": {
+          "id": "productList",
+          "name": "Products",
+          "path": "sap.ui.demo.nav.view.modelEntity",
+          "level": 4
         }
       }
     }

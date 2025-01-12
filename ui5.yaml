@@ -9,3 +9,11 @@ framework:
     - name: sap.m
     - name: sap.ui.core
     - name: themelib_sap_horizon
+
+# server:
+#   customMiddleware:
+#     - name: "proxyMiddleware"
+#       afterMiddleware: "compression"
+#       parameters:
+#         proxyUrl: "https://services.odata.org/V3/(S(njnoaszq3mvdyuv1fepveyzp))/OData/OData.svc/"
+#         localPath: "/here/goes/your/serviceUrl/"

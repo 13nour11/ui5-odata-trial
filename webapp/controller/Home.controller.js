@@ -13,6 +13,9 @@ sap.ui.define(
       onNavToEmployees: function () {
         this.getRouter().navTo("employeeList");
       },
+      onNavToProducts:function(){
+        this.getRouter().navTo("productList")
+      }
     });
   }
 );
