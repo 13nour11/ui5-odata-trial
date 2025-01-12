@@ -1,0 +1,19 @@
+{
+  "name": "navigation-tutorial",
+  "private": true,
+  "version": "1.0.0",
+  "author": "SAP SE",
+  "description": "UI5 Demo App - Navigation Tutorial",
+  "scripts": {
+    "build": "mbt build --mtar test.routing.mtar",
+    "build:workspaces": "npm run build --workspaces --if-present",
+    "deploy": "cf deploy mta_archives/test.routing.mtar --retries 0",
+    "lint": "npm run lint --workspaces --if-present",
+    "ui5lint": "npm run ui5lint --workspaces --if-present",
+    "start:app": "npm start --workspace sap.ui.demo.nav",
+    "start": "ui5 serve"
+  },
+  "devDependencies": {
+    "@ui5/cli": "^4"
+  }
+}
